@@ -1,0 +1,12 @@
+Total won by Independent = CALCULATE(COUNTROWS('Election dataset 2024'),'Election dataset 2024'[Leading Party Alliance Name]="Independent")
+
+Total won by party = CALCULATE(COUNTROWS('Election dataset 2024'),'Election dataset 2024'[Leading Party]=SELECTEDVALUE('Election dataset 2024'[Leading Party])
+
+Total Won's by INDIA = CALCULATE(COUNTROWS('Election dataset 2024'),'Election dataset 2024'[Leading Party Alliance Name]="INDIA")
+
+Total Wons by NDA = CALCULATE(COUNTROWS('Election dataset 2024'),'Election dataset 2024'[Leading Party Alliance Name]="NDA")
+
+Seat Won = IF('Election dataset 2024'[Status]="Result Declared",1,0)
+
+Total Won by Alliance = 
+CALCULATE(COUNTROWS('Election dataset 2024'),'Election dataset 2024'[Leading Party Alliance Name])
